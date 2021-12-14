@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Startet"
 cd /flash_cc2531
+echo "./cc_chipid"
 if ! ./cc_chipid | grep "ID = b524"; then echo "ChipID not found." && exit 1; fi
 
 echo "Downloading firmware"
